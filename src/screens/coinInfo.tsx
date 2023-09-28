@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   Link,
   Outlet,
@@ -19,7 +19,7 @@ import {
 } from "../component";
 import { ICoinDataPrice, ICoinData } from "../interface";
 import { useQuery } from "@tanstack/react-query";
-import { fetchCoinInfo, fetchCoinInfoPrice, fetchCoins } from "../api";
+import { fetchCoinInfo, fetchCoinInfoPrice } from "../api";
 import { Helmet } from "react-helmet";
 
 export default function CoinInfo() {
@@ -27,7 +27,7 @@ export default function CoinInfo() {
   const matchChart = useMatch("/coin-info/:id/chart");
   const matchPrice = useMatch("/coin-info/:id/price");
   const { id: paramId } = useParams<{ id: string }>();
-  const { state } = useLocation();
+  // const { state } = useLocation();
   const [errorModalCancel, setErrorModalCancel] = useState(false);
 
   //fetch data=> coinInfo

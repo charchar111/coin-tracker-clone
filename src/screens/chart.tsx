@@ -6,7 +6,6 @@ import { Helmet } from "react-helmet";
 import ApexChart from "react-apexcharts";
 import { ICoinOHLC } from "../interface";
 import { useTheme } from "styled-components";
-import { useState } from "react";
 
 export default function Chart() {
   const theme = useTheme();
@@ -78,7 +77,7 @@ export default function Chart() {
               style: {
                 fontWeight: 300,
                 color:
-                  theme.mode == "darkTheme" ? theme.textColor.main : undefined,
+                  theme.mode === "darkTheme" ? theme.textColor.main : undefined,
               },
             },
             chart: {
@@ -93,7 +92,7 @@ export default function Chart() {
               labels: {
                 style: {
                   colors:
-                    theme.mode == "darkTheme"
+                    theme.mode === "darkTheme"
                       ? dataTimeCloseMs?.map((element) => theme.textColor.main)
                       : undefined,
                 },
@@ -105,7 +104,7 @@ export default function Chart() {
               labels: {
                 style: {
                   colors:
-                    theme.mode == "darkTheme"
+                    theme.mode === "darkTheme"
                       ? dataTimeCloseMs?.map((element) => theme.textColor.main)
                       : undefined,
                 },

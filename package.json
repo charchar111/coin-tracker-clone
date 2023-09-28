@@ -50,5 +50,6 @@
   },
   "devDependencies": {
     "@types/react-helmet": "^6.1.7"
-  }
+  },
+  "homepage": "https://charchar111.github.io/coin-tracker-clone"
 }

@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { ICoinData, ICoinDataPrice } from "../interface";
+import { ICoinData } from "../interface";
 import { CoinLi, CoinUl, Flex, Title } from "../component";
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
