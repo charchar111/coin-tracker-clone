@@ -1,14 +1,43 @@
 # coin-tracker-clone
 
 ## 컨셉
-이 프로젝트는 암호화폐의 정보를 보여주는 사이트이며 react, react-query, styled-components의 공부를 위해 제작하였습니다.
+이 프로젝트는 암호화폐 정보 사이트에서 영감을 받아, 
+ - 주요 암호화폐의 정보와 시세 제공
+ - 시세의 변화 양상을 차트와 표의 시각 자료로 변환
+ - 사용자 편의를 위한 다크모드, 라이트 모드 변환 기능 지원합니다.
 
-## 기술 스택
-React
-React-router-dom
-Recoil
-styled-components
-tanstack/react-query
+기술적으로는 리엑트 쿼리와 styled-component를 이용해 클라이언트단에서 데이터를 받아 렌더링하는 CSR과 동적인 스타일링에 중점 두었습니다.
 
 ## Link
 https://charchar111.github.io/coin-tracker-clone/
+
+## 기술 스택
+
+- React
+- [React-router-dom](데이터-캐싱)
+- Recoil
+- styled-components
+- tanstack/react-query
+- [apexcharts](데이터의-시각화)
+
+## 세부사항
+### styled-components 기반의 다크 모드 팔레트 
+스타일 컴포넌트는 스타일(라이트 모드, 다크 모드)을 객체값으로 저장 후 동적으로 전환이 가능한 CSS-in-JS 라이브러리입니다.
+동적인 스타일링에 특화된 방식이기 때문에, 이 앱에서는 이런 장점을 최대한 살리고자 하였습니다. 다크 모드 전환 기능은 그 중 하나 입니다.
+
+##### tailwindCSS와의 비교
+tailwindCSS 역시 다크모드를 지원합니다. 다만, 각 모드에 대한 스타일링을 클래스네임에 모두 반영해야 하는 단점이 있는데 반해, 스타일 컴포넌트는 
+동일한 디자인의 변수만 변경하는 방식으로 손쉽게 다크모드를 구현 가능합니다. 또한, 스타일링 코드와 js코드를 분할 가능하다는 점에서 가독성의 이점을 가질 수 있습니다.
+
+### 데이터의 시각화
+
+
+### 데이터 캐싱
+
+## 이슈-해결방안
+### 데이터 요청 최적화 과정에서의 오류
+#### 문제
+
+#### 해결방안
+
+## 배운 점
